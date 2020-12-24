@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css-files/style.css">
+  <link rel="stylesheet" href="css-files/footer.css">
+  <style>
+    .mySlides img {
+      border: 5px solid #555;
+    }
+
+    .mom-son {
+      margin-top: -17%;
+      margin-right: 2%;
+      float: right;
+    }
+
+    body {
+      background-image: url("images/books.jpg");
+      background-size: 120%;
+      background-repeat: no-repeat;
+    }
+
+    * {box-sizing: border-box}
+    .mySlides {display: none}
+    img {vertical-align: middle;}
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 600px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    /* Caption text */
+    .text {
+      color: black;
+      font-size: 11px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 80px;
+      right: 21%;
+      width: 65%;
+      text-align: center;
+      font-family: cursive;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color:white;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 8px;
+      width: 8px;
+      margin: 0 2px;
+      background-color: gold;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 60px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-image: url("images/log-in-bg.jpg");
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    input {
+      padding: 5px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body style="height:500px">
+
+  <div class="topnav">
+    <a href="index.html"><img src="images/omega-logo.png" alt="Omega DigiBible logo"></a>
+    <a class="not-img active-nav" href="index.html">Home</a>
+    <a class="not-img" href="index.html" onclick="myFunction()">Books</a>
+    <div style="margin-left: 85%;">
+      <!-- Trigger/Open The Modal -->
+      <a class="not-img" href="#modal" id="myBtn">Sign Up</a>
+      <a class="not-img" href="log-in.html">Log In</a>
+    </div>
+  </div>
+
+  <div class="slideshow-container" style="margin-top: 5%;">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="images/open-book.jpg" alt="Open book" style="width:100%">
+      <div class="text">
+        <h1>KING JAMES VERSION<br>
+            PROVERBS 22:6<br>
+            Train up a child in the way he should go: and when he is old, he will not depart from it. 
+        </h1>
+      </div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="images/open-book.jpg" alt="Open Book" style="width:100%">
+      <div class="text">
+        <h1>KING JAMES VERSION<br>
+            PROVERBS 22:15<br>
+            Foolishness is bound in the heart of a child; but the rod of correction shall drive it far from him.
+        </h1>
+        </div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="images/open-book.jpg" alt="Open Book" style="width:100%">
+      <div class="text">
+        <h1>KING JAMES VERSION<br>
+            PROVERBS 23:13<br>
+            Withhold not correction from the child: for if thou beatest him with the rod, he shall not die.
+        </h1>
+        </div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+  </div>
+  <br>
+    
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content" style="width: 30%;">
+      <span class="close">&times;</span>
+      <form action="connect.php" method="POST" style="padding-left: 20px; padding-right: 20px; color: white;">
+        <h1>Sign Up</h1>
+        <hr>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required><br><br>
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <label for="birthdate" style="text-align: left;">Birthdate:</label><br>
+        <input type="date" id="birthdate" name="birthdate" required><br><br>
+        <input type="submit" value="Sign Up" style="width: 100px; margin-left: 120px; background-color: black; border-radius: 20px; color: white;">
+      </form>
+    </div>
+
+  </div>
+    
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+
+    function myFunction() {
+      alert("For you to continue, please log in to your account first or sign up if you don't have an account yet!");
+    }
+
+    // Get the modal
+  var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+  </script>
+
+  <img class="mom-son" src="images/mother-and-son.png" alt="Mom and son" style="width: 300px;">
+  
+  <div class="footer" style="text-align: center;">
+    <a href='https://pngtree.com/free-backgrounds' target="_blank">&copy;Free background photos from pngtree.com</a>
+  </div>
+</body>
+</html>
+
+

@@ -1,0 +1,48 @@
+body {
+    font-family: cursive;
+    margin: 10px;
+}
+
+.topnav {
+    position: fixed;
+    background-color: #555;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 80%;
+    z-index: 1;
+}
+
+.topnav a {
+    float: left;
+    color: gold;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: black;
+    color: white;
+}
+
+.not-img:hover {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.topnav a.active-nav {
+    color: white;
+}
+
+.topnav a.not-img {
+    margin-top: 12px;
+    background-color: #555;
+}
+
+.topnav img {
+    width: 129px;
+    height: 50px;
+}
